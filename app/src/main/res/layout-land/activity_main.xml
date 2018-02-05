@@ -10,48 +10,48 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/tennis_portrait" />
+        android:scaleType="fitXY"
+        android:src="@drawable/tennis_landscape" />
 
     <LinearLayout
         android:id="@+id/score_board"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:orientation="horizontal">
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="5"
             android:background="@android:color/black"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="8dp"
                 android:fontFamily="sans-serif-medium"
-                android:gravity="center_horizontal"
+                android:gravity="center_vertical"
                 android:text="@string/player_a"
                 android:textColor="@android:color/white"
                 android:textSize="20sp" />
 
             <View
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
                 android:background="#33691E" />
 
             <TextView
                 android:id="@+id/player_a_game"
-                android:layout_width="wrap_content"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+                android:layout_gravity="center_vertical"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center_horizontal"
                 android:text="@string/n0"
@@ -59,26 +59,19 @@
                 android:textSize="50sp" />
 
             <View
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
                 android:background="#33691E" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent">
 
                 <TextView
                     android:id="@+id/set_text_playerA"
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_toLeftOf="@+id/line_vertical_2"
-                    android:layout_toStartOf="@+id/line_vertical_2"
                     android:fontFamily="sans-serif-medium"
-                    android:gravity="center"
                     android:text="@string/set"
                     android:textColor="#00E676"
                     android:textSize="18sp" />
@@ -91,34 +84,29 @@
                     android:layout_alignLeft="@id/set_text_playerA"
                     android:layout_alignRight="@id/set_text_playerA"
                     android:layout_alignStart="@id/set_text_playerA"
-                    android:layout_below="@id/set_text_playerA"
-                    android:layout_gravity="center_horizontal"
+                    android:layout_centerVertical="true"
                     android:fontFamily="sans-serif-light"
                     android:gravity="center"
                     android:text="@string/n0"
                     android:textColor="#FFFF8D"
-                    android:textSize="30sp" />
+                    android:textSize="40sp" />
 
                 <View
                     android:id="@+id/line_vertical_2"
-                    android:layout_width="16dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@id/player_a_set"
-                    android:layout_centerHorizontal="true"
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/player_a_set"
+                    android:layout_toRightOf="@id/player_a_set"
                     android:background="#33691E" />
 
                 <TextView
                     android:id="@+id/match_text_playerA"
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp"
                     android:layout_toEndOf="@id/line_vertical_2"
                     android:layout_toRightOf="@id/line_vertical_2"
                     android:fontFamily="sans-serif-medium"
-                    android:gravity="center"
                     android:text="@string/match"
                     android:textColor="#00E676"
                     android:textSize="18sp" />
@@ -131,73 +119,71 @@
                     android:layout_alignLeft="@id/match_text_playerA"
                     android:layout_alignRight="@id/match_text_playerA"
                     android:layout_alignStart="@id/match_text_playerA"
-                    android:layout_below="@id/match_text_playerA"
-                    android:layout_gravity="center_horizontal"
+                    android:layout_centerVertical="true"
                     android:fontFamily="sans-serif-light"
                     android:gravity="center"
                     android:text="@string/n0"
                     android:textColor="#FFFF8D"
                     android:textSize="30sp" />
-
             </RelativeLayout>
 
             <View
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
                 android:background="#33691E" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="4dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
                 android:gravity="center"
                 android:onClick="addPointForPlayerA"
                 android:text="@string/point"
                 android:textAllCaps="true" />
-
         </LinearLayout>
 
+
         <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
             android:background="@android:color/darker_gray" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="20dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="16dp"
-            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="5"
             android:background="@android:color/black"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="8dp"
                 android:fontFamily="sans-serif-medium"
-                android:gravity="center_horizontal"
+                android:gravity="center_vertical"
                 android:text="@string/player_b"
                 android:textColor="@android:color/white"
                 android:textSize="20sp" />
 
             <View
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
                 android:background="#33691E" />
 
             <TextView
                 android:id="@+id/player_b_game"
-                android:layout_width="wrap_content"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+                android:layout_gravity="center_vertical"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center_horizontal"
                 android:text="@string/n0"
@@ -205,26 +191,19 @@
                 android:textSize="50sp" />
 
             <View
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
                 android:background="#33691E" />
 
             <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
 
                 <TextView
                     android:id="@+id/set_text_playerB"
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_toLeftOf="@+id/line_vertical_3"
-                    android:layout_toStartOf="@+id/line_vertical_3"
                     android:fontFamily="sans-serif-medium"
-                    android:gravity="center"
                     android:text="@string/set"
                     android:textColor="#00E676"
                     android:textSize="18sp" />
@@ -237,34 +216,29 @@
                     android:layout_alignLeft="@id/set_text_playerB"
                     android:layout_alignRight="@id/set_text_playerB"
                     android:layout_alignStart="@id/set_text_playerB"
-                    android:layout_below="@id/set_text_playerB"
-                    android:layout_gravity="center_horizontal"
+                    android:layout_centerVertical="true"
                     android:fontFamily="sans-serif-light"
                     android:gravity="center"
                     android:text="@string/n0"
                     android:textColor="#FFFF8D"
-                    android:textSize="30sp" />
+                    android:textSize="40sp" />
 
                 <View
                     android:id="@+id/line_vertical_3"
-                    android:layout_width="16dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@id/player_b_set"
-                    android:layout_centerHorizontal="true"
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/player_b_set"
+                    android:layout_toRightOf="@id/player_b_set"
                     android:background="#33691E" />
 
                 <TextView
                     android:id="@+id/match_text_playerB"
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp"
                     android:layout_toEndOf="@id/line_vertical_3"
                     android:layout_toRightOf="@id/line_vertical_3"
                     android:fontFamily="sans-serif-medium"
-                    android:gravity="center"
                     android:text="@string/match"
                     android:textColor="#00E676"
                     android:textSize="18sp" />
@@ -277,56 +251,56 @@
                     android:layout_alignLeft="@id/match_text_playerB"
                     android:layout_alignRight="@id/match_text_playerB"
                     android:layout_alignStart="@id/match_text_playerB"
-                    android:layout_below="@id/match_text_playerB"
+                    android:layout_centerVertical="true"
                     android:layout_gravity="center_horizontal"
                     android:fontFamily="sans-serif-light"
                     android:gravity="center"
                     android:text="@string/n0"
                     android:textColor="#FFFF8D"
                     android:textSize="30sp" />
-
             </RelativeLayout>
 
             <View
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
                 android:background="#33691E" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="4dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
                 android:gravity="center"
                 android:onClick="addPointForPlayerB"
                 android:text="@string/point"
                 android:textAllCaps="true" />
-
         </LinearLayout>
 
-    </LinearLayout>
 
-    <TextView
-        android:id="@+id/display_winner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/score_board"
-        android:layout_centerInParent="true"
-        android:layout_gravity="center_horizontal"
-        android:fontFamily="sans-serif-medium"
-        android:gravity="center"
-        android:text=""
-        android:textColor="#FFFF8D"
-        android:textSize="50sp" />
+        <TextView
+            android:id="@+id/display_winner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:background="#000000"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="@string/playerAWins"
+            android:textColor="#000000"
+            android:textSize="40sp" />
+    </LinearLayout>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/display_winner"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="32dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        android:layout_toEndOf="@id/score_board"
+        android:layout_toRightOf="@id/score_board"
         android:onClick="reset"
         android:padding="8dp"
         android:text="@string/reset"

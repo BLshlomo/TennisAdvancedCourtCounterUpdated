@@ -1,3 +1,22 @@
 <resources>
+    <!-- the name of the app -->
     <string name="app_name">Tennis Advanced Court Counter</string>
+    <!-- Player A -->
+    <string name="player_a">Player A</string>
+    <!-- Player B -->
+    <string name="player_b">Player B</string>
+    <!-- The initiating score number 0 -->
+    <string name="n0">0</string>
+    <!-- Set score headliner -->
+    <string name="set">Set:</string>
+    <!-- Match score headliner -->
+    <string name="match">Match:</string>
+    <!-- Add One Point button -->
+    <string name="point">One Point</string>
+    <!-- Reset the score button -->
+    <string name="reset">Reset</string>
+    <!-- Display Player A wins -->
+    <string name="playerAWins">Player A Wins !!!</string>
+    <!-- Display Player B wins -->
+    <string name="playerBWins">Player B Wins !!!</string>
 </resources>
